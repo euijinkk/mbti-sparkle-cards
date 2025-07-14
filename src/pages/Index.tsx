@@ -1,55 +1,71 @@
-import { useState } from "react";
-import { Brain, Sparkles, Users } from "lucide-react";
+import { Brain, Sparkles, Eye, Moon, Star } from "lucide-react";
 import { MBTICard } from "@/components/MBTICard";
-import { FilterTabs } from "@/components/FilterTabs";
-import { mbtiTests, getTestsByCategory } from "@/data/mbtiTests";
+import { mbtiTests } from "@/data/mbtiTests";
 
 const Index = () => {
-  const [selectedCategory, setSelectedCategory] = useState("전체");
-  const filteredTests = getTestsByCategory(selectedCategory);
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Cosmic Background */}
+      <div className="cosmic-bg">
+        {/* Floating Particles */}
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-accent/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent" />
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
         
-        <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24">
-          <div className="text-center space-y-8">
-            {/* Logo & Title */}
-            <div className="flex justify-center mb-6">
-              <div className="relative">
-                <Brain className="h-16 w-16 text-primary float-animation" />
-                <Sparkles className="h-6 w-6 text-primary/60 absolute -top-2 -right-2 float-animation" />
+        <div className="relative max-w-6xl mx-auto px-4 py-20 sm:py-32">
+          <div className="text-center space-y-12">
+            {/* Mystical Logo */}
+            <div className="flex justify-center mb-8">
+              <div className="relative soul-glow">
+                <div className="flex items-center gap-4">
+                  <Brain className="h-20 w-20 text-primary float-mystical" />
+                  <Eye className="h-16 w-16 text-accent float-mystical" />
+                  <Moon className="h-18 w-18 text-primary-glow float-mystical" />
+                </div>
+                <Sparkles className="h-8 w-8 text-primary/80 absolute -top-4 -right-4 float-mystical" />
+                <Star className="h-6 w-6 text-accent/60 absolute -bottom-2 -left-2 float-mystical" />
               </div>
             </div>
             
-            <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
+            <div className="space-y-8">
+              <h1 className="text-6xl sm:text-8xl font-bold text-cosmic text-glow">
                 MBTI Store
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                다양한 MBTI 성격 검사를 한 곳에서 비교하고 선택하세요.<br />
-                나에게 맞는 검사를 찾아 성격을 깊이 이해해보세요.
-              </p>
-            </div>
+              <div className="space-y-4">
+                <p className="text-2xl text-foreground/90 max-w-3xl mx-auto leading-relaxed font-light">
+                  🌟 내면의 우주를 탐험하는 신비로운 여정 🌟
+                </p>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  다양한 성격 검사를 통해 진정한 자아를 발견하고<br />
+                  숨겨진 잠재력과 영혼의 본질을 깨달아보세요
+                </p>
+              </div>
 
-            {/* Stats */}
-            <div className="flex justify-center items-center gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">{mbtiTests.length}+</div>
-                <div className="text-sm text-muted-foreground">검사 사이트</div>
-              </div>
-              <div className="h-8 w-px bg-border" />
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">무료 이용</div>
-              </div>
-              <div className="h-8 w-px bg-border" />
-              <div className="text-center flex items-center gap-1">
-                <Users className="h-5 w-5 text-primary" />
-                <div className="text-2xl font-bold text-primary">신뢰</div>
-                <div className="text-sm text-muted-foreground ml-1">검증됨</div>
+              {/* Mystical Stats */}
+              <div className="flex justify-center items-center gap-12 pt-12">
+                <div className="text-center soul-glow">
+                  <div className="text-4xl font-bold text-cosmic text-glow">{mbtiTests.length}</div>
+                  <div className="text-lg text-muted-foreground">신비로운 검사</div>
+                </div>
+                <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
+                <div className="text-center soul-glow">
+                  <div className="text-4xl font-bold text-cosmic text-glow">∞</div>
+                  <div className="text-lg text-muted-foreground">무한한 가능성</div>
+                </div>
+                <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
+                <div className="text-center soul-glow">
+                  <div className="text-4xl font-bold text-cosmic text-glow flex items-center justify-center gap-2">
+                    <Sparkles className="h-8 w-8" />
+                  </div>
+                  <div className="text-lg text-muted-foreground">영혼의 각성</div>
+                </div>
               </div>
             </div>
           </div>
@@ -57,25 +73,30 @@ const Index = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Filter Tabs */}
-        <FilterTabs 
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        {/* Mystical Section Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-cosmic mb-4">🔮 자아 탐구의 신전 🔮</h2>
+          <p className="text-xl text-muted-foreground">각각의 검사는 당신 내면의 다른 차원을 열어줍니다</p>
+        </div>
 
         {/* Test Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTests.map((test) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {mbtiTests.map((test) => (
             <MBTICard key={test.id} test={test} />
           ))}
         </div>
 
-        {/* Footer */}
-        <div className="text-center mt-16 pt-8 border-t border-border/50">
-          <p className="text-muted-foreground">
-            💡 각 검사의 특성을 비교해보고 자신에게 가장 적합한 검사를 선택하세요
-          </p>
+        {/* Mystical Footer */}
+        <div className="text-center mt-20 pt-12 border-t border-border/30">
+          <div className="space-y-4">
+            <p className="text-2xl text-cosmic font-semibold">
+              ✨ 당신만의 우주를 발견하세요 ✨
+            </p>
+            <p className="text-lg text-muted-foreground">
+              각 검사는 당신 영혼의 다른 면을 비추는 거울입니다
+            </p>
+          </div>
         </div>
       </div>
     </div>
