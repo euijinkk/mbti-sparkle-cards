@@ -36,14 +36,14 @@ export const MBTICard = ({ test }: MBTICardProps) => {
         {/* Header */}
         <div className="flex items-start justify-between mb-6">
           <div className="flex items-center gap-4">
-            <div className="text-4xl float-mystical">{test.icon}</div>
+            <div className="text-4xl">{test.icon}</div>
             <div>
               <h3 className="text-2xl font-bold text-cosmic group-hover:text-glow transition-all">
                 {test.name}
               </h3>
             </div>
           </div>
-          <ExternalLink className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors float-mystical" />
+          <ExternalLink className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
         </div>
 
         {/* Description */}
@@ -54,7 +54,7 @@ export const MBTICard = ({ test }: MBTICardProps) => {
         {/* Duration */}
         <div className="flex items-center gap-3 mb-6 text-muted-foreground">
           <Clock className="h-5 w-5 text-accent" />
-          <span className="text-lg">영혼의 시간: {test.duration}</span>
+          <span className="text-lg">검사 시간: {test.duration}</span>
         </div>
 
         {/* Features */}

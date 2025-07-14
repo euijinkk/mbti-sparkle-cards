@@ -8,66 +8,66 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Mystical Self-Discovery Color Palette */
-    --background: 240 15% 8%;
-    --foreground: 300 20% 95%;
+    /* Natural Self-Discovery Color Palette */
+    --background: 215 25% 12%;
+    --foreground: 210 15% 92%;
 
-    --card: 240 15% 12%;
-    --card-foreground: 300 15% 90%;
+    --card: 215 20% 16%;
+    --card-foreground: 210 12% 88%;
 
-    --popover: 240 15% 12%;
-    --popover-foreground: 300 15% 90%;
+    --popover: 215 20% 16%;
+    --popover-foreground: 210 12% 88%;
 
-    --primary: 280 100% 65%;
+    --primary: 200 45% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 300 100% 75%;
-    --primary-deep: 260 100% 55%;
+    --primary-glow: 195 50% 65%;
+    --primary-deep: 205 40% 45%;
 
-    --secondary: 240 20% 18%;
-    --secondary-foreground: 300 15% 85%;
+    --secondary: 215 15% 22%;
+    --secondary-foreground: 210 12% 82%;
 
-    --muted: 240 15% 15%;
-    --muted-foreground: 280 10% 65%;
+    --muted: 215 12% 18%;
+    --muted-foreground: 200 8% 60%;
 
-    --accent: 320 80% 60%;
-    --accent-foreground: 300 15% 90%;
+    --accent: 165 35% 55%;
+    --accent-foreground: 210 12% 88%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 20% 20%;
-    --input: 240 20% 16%;
-    --ring: 280 100% 65%;
+    --border: 215 15% 25%;
+    --input: 215 15% 20%;
+    --ring: 200 45% 55%;
 
-    /* Mystical Gradients for Self-Discovery */
+    /* Natural Gradients for Self-Discovery */
     --gradient-cosmic: linear-gradient(135deg, 
-      hsl(280 100% 65%) 0%, 
-      hsl(300 100% 75%) 25%, 
-      hsl(320 80% 60%) 50%, 
-      hsl(260 100% 55%) 75%, 
-      hsl(240 80% 50%) 100%);
+      hsl(200 45% 55%) 0%, 
+      hsl(195 50% 65%) 25%, 
+      hsl(165 35% 55%) 50%, 
+      hsl(180 40% 50%) 75%, 
+      hsl(190 35% 45%) 100%);
     
     --gradient-aurora: linear-gradient(45deg, 
-      hsl(280 100% 65% / 0.9) 0%, 
-      hsl(300 100% 75% / 0.8) 30%, 
-      hsl(260 100% 55% / 0.9) 60%, 
-      hsl(320 80% 60% / 0.8) 100%);
+      hsl(200 45% 55% / 0.7) 0%, 
+      hsl(195 50% 65% / 0.6) 30%, 
+      hsl(180 40% 50% / 0.7) 60%, 
+      hsl(165 35% 55% / 0.6) 100%);
     
     --gradient-soul: linear-gradient(135deg, 
-      hsl(240 15% 12%) 0%, 
-      hsl(260 25% 15%) 50%, 
-      hsl(240 15% 12%) 100%);
+      hsl(215 25% 12%) 0%, 
+      hsl(210 20% 15%) 50%, 
+      hsl(215 25% 12%) 100%);
     
     --gradient-card-mystical: linear-gradient(145deg, 
-      hsl(240 15% 12%) 0%, 
-      hsl(260 20% 16%) 50%, 
-      hsl(240 15% 12%) 100%);
+      hsl(215 20% 16%) 0%, 
+      hsl(210 18% 18%) 50%, 
+      hsl(215 20% 16%) 100%);
 
-    /* Magical Shadows & Glows */
-    --shadow-mystical: 0 8px 32px -4px hsl(280 100% 65% / 0.4);
-    --shadow-deep: 0 12px 40px -8px hsl(260 100% 55% / 0.6);
-    --shadow-aurora: 0 0 60px hsl(300 100% 75% / 0.5);
-    --glow-inner: inset 0 1px 0 hsl(300 100% 75% / 0.2);
+    /* Subtle Shadows & Glows */
+    --shadow-mystical: 0 8px 32px -4px hsl(200 45% 55% / 0.3);
+    --shadow-deep: 0 12px 40px -8px hsl(180 40% 50% / 0.4);
+    --shadow-aurora: 0 0 60px hsl(195 50% 65% / 0.3);
+    --glow-inner: inset 0 1px 0 hsl(195 50% 65% / 0.15);
 
     /* Smooth & Bouncy Animations */
     --transition-magical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -145,7 +145,7 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Mystical MBTI Card Styles */
+  /* Natural MBTI Card Styles */
   .mbti-card {
     @apply relative overflow-hidden rounded-2xl border border-border/30;
     background: var(--gradient-card-mystical);
@@ -194,17 +194,17 @@ All colors MUST be HSL.
   }
 
   .mbti-card:hover::after {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   /* Cosmic Button Variant */
   .btn-cosmic {
+    @apply relative overflow-hidden rounded-xl px-8 py-4 font-semibold text-lg;
     background: var(--gradient-cosmic);
-    @apply text-primary-foreground border-0 rounded-xl font-semibold;
-    box-shadow: var(--shadow-mystical), var(--glow-inner);
+    color: white;
+    border: 1px solid var(--primary);
+    box-shadow: var(--shadow-mystical);
     transition: var(--transition-magical);
-    position: relative;
-    overflow: hidden;
   }
 
   .btn-cosmic::before {
@@ -214,28 +214,28 @@ All colors MUST be HSL.
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.6s;
+    background: linear-gradient(90deg, transparent, hsl(195 50% 65% / 0.4), transparent);
+    transition: var(--transition-magical);
   }
 
   .btn-cosmic:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: var(--shadow-aurora);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-deep);
   }
 
   .btn-cosmic:hover::before {
     left: 100%;
   }
 
-  /* Mystical Background Effects */
+  /* Cosmic Background */
   .cosmic-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -10;
     background: var(--gradient-soul);
+    z-index: -10;
   }
 
   .cosmic-bg::before {
@@ -243,14 +243,13 @@ All colors MUST be HSL.
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: 
-      radial-gradient(circle at 20% 30%, hsl(280 100% 65% / 0.3) 0%, transparent 40%),
-      radial-gradient(circle at 80% 20%, hsl(300 100% 75% / 0.2) 0%, transparent 40%),
-      radial-gradient(circle at 40% 80%, hsl(260 100% 55% / 0.3) 0%, transparent 40%),
-      radial-gradient(circle at 90% 90%, hsl(320 80% 60% / 0.2) 0%, transparent 40%);
-    animation: cosmicDrift 20s ease-in-out infinite;
+      radial-gradient(circle at 20% 50%, hsl(200 45% 55% / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(165 35% 55% / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(180 40% 50% / 0.1) 0%, transparent 50%);
+    animation: cosmicDrift 20s ease-in-out infinite alternate;
   }
 
   /* Floating Particles */
@@ -258,10 +257,10 @@ All colors MUST be HSL.
     position: absolute;
     width: 4px;
     height: 4px;
-    background: var(--gradient-cosmic);
+    background: radial-gradient(circle, hsl(195 50% 65% / 0.4) 0%, transparent 70%);
     border-radius: 50%;
-    animation: particleFloat 15s linear infinite;
-    opacity: 0.6;
+    animation: particleFloat linear infinite;
+    pointer-events: none;
   }
 
   .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
@@ -270,7 +269,7 @@ All colors MUST be HSL.
   .particle:nth-child(4) { left: 70%; animation-delay: -6s; animation-duration: 14s; }
   .particle:nth-child(5) { left: 90%; animation-delay: -8s; animation-duration: 16s; }
 
-  /* Mystical Glow Effects */
+  /* Soul Glow Effect */
   .soul-glow {
     position: relative;
   }
@@ -278,36 +277,35 @@ All colors MUST be HSL.
   .soul-glow::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, hsl(280 100% 65% / 0.1) 0%, transparent 70%);
-    transform: translate(-50%, -50%);
-    animation: pulse 4s ease-in-out infinite;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, hsl(195 50% 65% / 0.05) 0%, transparent 70%);
+    border-radius: inherit;
     z-index: -1;
+    animation: pulse 4s ease-in-out infinite;
   }
 
-  /* Enhanced Float Animation */
+  /* Mystical Float Animation */
   .float-mystical {
-    animation: floatMystical 8s ease-in-out infinite;
+    animation: floatMystical 3s ease-in-out infinite;
   }
 
   .float-mystical:nth-child(2n) {
-    animation-delay: -4s;
-    animation-duration: 10s;
+    animation-delay: -1s;
+    animation-duration: 4s;
   }
 
   .float-mystical:nth-child(3n) {
     animation-delay: -2s;
-    animation-duration: 12s;
+    animation-duration: 5s;
   }
 
-  /* Fade In with Scale */
+  /* Fade In Animation */
   .fade-in-mystical {
-    animation: fadeInMystical 0.8s ease-out forwards;
+    animation: fadeInMystical 1s ease-out forwards;
     opacity: 0;
-    transform: translateY(40px) scale(0.9);
   }
 
   .fade-in-mystical:nth-child(1) { animation-delay: 0.1s; }
@@ -317,43 +315,42 @@ All colors MUST be HSL.
   .fade-in-mystical:nth-child(5) { animation-delay: 0.9s; }
   .fade-in-mystical:nth-child(6) { animation-delay: 1.1s; }
 
-  /* Text Glow Effects */
+  /* Text Effects */
   .text-glow {
     text-shadow: 
-      0 0 10px hsl(280 100% 65% / 0.5),
-      0 0 20px hsl(300 100% 75% / 0.3),
-      0 0 30px hsl(260 100% 55% / 0.2);
+      0 0 10px hsl(195 50% 65% / 0.5),
+      0 0 20px hsl(195 50% 65% / 0.3),
+      0 0 30px hsl(195 50% 65% / 0.2);
   }
 
   .text-cosmic {
     background: var(--gradient-cosmic);
-    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textShimmer 3s ease-in-out infinite;
   }
 }
 
+/* Keyframe Animations */
 @keyframes cosmicDrift {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(5px, -10px) rotate(1deg); }
-  50% { transform: translate(-3px, 8px) rotate(-1deg); }
-  75% { transform: translate(8px, 3px) rotate(0.5deg); }
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
 }
 
 @keyframes particleFloat {
   0% {
-    transform: translateY(100vh) translateX(0px) rotate(0deg);
+    transform: translateY(100vh) rotate(0deg);
     opacity: 0;
   }
   10% {
-    opacity: 0.6;
+    opacity: 1;
   }
   90% {
-    opacity: 0.6;
+    opacity: 1;
   }
   100% {
-    transform: translateY(-100px) translateX(50px) rotate(360deg);
+    transform: translateY(-100px) rotate(360deg);
     opacity: 0;
   }
 }
@@ -362,33 +359,38 @@ All colors MUST be HSL.
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
-  33% {
-    transform: translateY(-15px) rotate(1deg);
-  }
-  66% {
-    transform: translateY(-5px) rotate(-1deg);
+  50% {
+    transform: translateY(-10px) rotate(180deg);
   }
 }
 
 @keyframes fadeInMystical {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
 @keyframes pulse {
   0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.3;
+    opacity: 0.5;
+    transform: scale(1);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.1;
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
 @keyframes textShimmer {
-  0%, 100% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(30deg); }
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
 }

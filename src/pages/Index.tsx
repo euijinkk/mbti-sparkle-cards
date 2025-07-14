@@ -17,7 +17,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/6 via-transparent to-accent/6" />
 
         <div className="relative max-w-6xl mx-auto px-4 py-20 sm:py-32">
           <div className="text-center space-y-12">
@@ -51,9 +51,9 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-cosmic mb-4">
             🔮 MBTI 검사 모아보기 🔮
           </h2>
-          <p className="text-xl text-muted-foreground">
+          {/* <p className="text-xl text-muted-foreground">
             각각의 검사는 당신 내면의 다른 차원을 열어줍니다
-          </p>
+          </p> */}
         </div>
 
         {/* Test Cards Grid */}
